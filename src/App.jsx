@@ -1,8 +1,11 @@
 import React from 'react'
+import RoutePage from './page/RoutePage/RoutePage'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <RoutePage/>
+    </div>
   )
 }
 

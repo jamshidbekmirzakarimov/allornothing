@@ -1,0 +1,32 @@
+.site-header-wrapper {
+  border-radius: 16px;
+  background: var(
+    --Black-2,
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    #262626
+  );
+}
+
+
+
+  
+  .menu-items {
+    /* Menu items container styles */
+    transition: opacity 0.3s ease-in-out;
+    animation: slideIn 0.3s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+ 
+  
+  /* Other styles */
