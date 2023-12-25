@@ -1,0 +1,35 @@
+
+.hero-section {
+  position: relative;
+  padding-top: 10px;
+  .swiper-pagination {
+    position: absolute;
+    width: auto;
+    height: 30px;
+    top: 0px;
+    left: 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    width: 56px;
+    height: 8px;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+  }
+}
+
+.hero-wrapper {
+  background: linear-gradient(102deg, #c0c0be 26.06%, #dddddb 81.79%);
+}
+
+.hero-wrap{
+  background: linear-gradient(102deg, #C0C0BE 26.06%, #DDDDDB 81.79%);
+
+}

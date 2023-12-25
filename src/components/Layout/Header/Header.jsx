@@ -6,6 +6,7 @@ import User from "../../../assets/svg/user.svg";
 import Heart from "../../../assets/svg/heart.svg";
 import Basket from "../../../assets/svg/basket.svg";
 import Close from "../../../assets/svg/close.svg";
+import ChangeLang from "../../ChangeLang/ChangeLang";
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
@@ -17,14 +18,14 @@ const Header = () => {
     setActiveMenu(null);
   };
   return (
-    <header className="site-header py-[5px] w-full  ">
-      <div className="container">
-        <div className="site-header-wrapper w-full p-[4px] flex items-center flex-col">
+    <header className="site-header py-[5px] w-full  relative z-50">
+      <div className="container ">
+        <div className="site-header-wrapper relative w-full p-[4px] flex items-center flex-col">
           <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] flex items-center justify-between w-full rounded-[12px]">
             <div className="flex items-center">
               <img className="pe-[20px]" src={Logo} alt="logo" />
               <ul className="flex">
-                <li>
+                <li className="mt-[4px] p-0">
                   <Link
                     className={`uppercase font-bold px-[24px] border-s-[1px] border-[#BFBFBF] ${
                       activeMenu === "men" ? "active" : ""
@@ -34,7 +35,7 @@ const Header = () => {
                     MEN
                   </Link>
                 </li>
-                <li>
+                <li className="mt-[4px] p-0">
                   <Link
                     className={`uppercase font-bold px-[24px] border-s-[1px] border-[#BFBFBF] ${
                       activeMenu === "women" ? "active" : ""
@@ -44,7 +45,7 @@ const Header = () => {
                     women
                   </Link>
                 </li>
-                <li>
+                <li className="mt-[4px] p-0">
                   <Link
                     className={`uppercase font-bold px-[24px] border-s-[1px] border-[#BFBFBF] ${
                       activeMenu === "children" ? "active" : ""
@@ -54,7 +55,7 @@ const Header = () => {
                     children
                   </Link>
                 </li>
-                <li>
+                <li className="mt-[4px] p-0">
                   <Link
                     className={`uppercase font-bold px-[24px] border-s-[1px] border-[#BFBFBF] ${
                       activeMenu === "sale" ? "active" : ""
@@ -64,7 +65,7 @@ const Header = () => {
                     sale
                   </Link>
                 </li>
-                <li>
+                <li className="mt-[4px] p-0">
                   <Link
                     className={`uppercase font-bold px-[24px] border-s-[1px] border-[#BFBFBF] ${
                       activeMenu === "collection" ? "active" : ""
@@ -77,26 +78,7 @@ const Header = () => {
               </ul>
             </div>
             <div className="flex items-center overflow-hidden">
-              <select className="bg-transparent text-[12px] font-medium leading-normal text-[#000] outline-none">
-                <option
-                  className="text-[12px] font-medium leading-normal"
-                  value="eng"
-                >
-                  English
-                </option>
-                <option
-                  className="text-[12px] font-medium leading-normal"
-                  value="ru"
-                >
-                  Russia
-                </option>
-                <option
-                  className="text-[12px] font-medium leading-normal"
-                  value="uz"
-                >
-                  Uzbek
-                </option>
-              </select>
+             <ChangeLang/>
               <div className="flex items-center bg-[#BFBFBF] h-[50px] w-[1px] mx-[36px]"></div>
               <div className="flex items-center">
                 <img className="pe-[16px]" src={User} alt="" />
@@ -113,10 +95,8 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
-
         {activeMenu && (
-          <div className="menu-items w-full bg-[#1E1E1E] mt-[-15px] rounded-br-[12px] rounded-bl-[12px] pt-[45px] px-[56px] pb-[32px]">
+          <div className="menu-items w-full  absolute -z-10 top-[50px] bg-[#1E1E1E] mt-[-15px] rounded-br-[12px] rounded-bl-[12px] pt-[45px] px-[56px] pb-[32px]">
             {activeMenu === "men" && (
               <div>
                 <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
@@ -219,6 +199,8 @@ const Header = () => {
             )}
           </div>
         )}
+        </div>
+
       </div>
     </header>
   );

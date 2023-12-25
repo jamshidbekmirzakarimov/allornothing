@@ -18,6 +18,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
   flex-direction: column;
   height: 100%;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: PP Formula;
   background-color: #0F0F0F;
 }
 
@@ -45,6 +47,11 @@ img {
   overflow: hidden;
 }
 
+ul,ol,li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 /* CONTAINER */
 .container {
   width: 100%;
