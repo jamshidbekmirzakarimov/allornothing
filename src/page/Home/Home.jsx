@@ -1,12 +1,14 @@
-import React from 'react'
-import Hero from '../../components/Hero/Hero'
+import React from "react";
+import { AllMenu, Hero, NewProduct } from "../../Modules";
 
 const Home = () => {
   return (
     <>
-    <Hero/>
+      <Hero />
+      <AllMenu/>
+      <NewProduct />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -164,6 +164,7 @@ const Header = () => {
                     sale
                   </h2>
                   <button
+                  
                     className="close-button border-s-[1px] border-[#333] ps-[21px] "
                     onClick={handleCloseButtonClick}
                   >
