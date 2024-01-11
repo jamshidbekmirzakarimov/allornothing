@@ -1,5 +1,5 @@
 import React from "react";
-import "./NewProduct.scss";
+import "./ByBrend.scss";
 import SectionName from "../../constants/SectionName/SectionName";
 import SeeAll from "../../assets/svg/seeall.svg";
 import arrowRight from "../../assets/svg/arrowRight.svg";
@@ -23,7 +23,7 @@ const imagePaths = [
   Newproduct8,
 ];
 
-const NewProduct = () => {
+const ByBrend = () => {
   return (
     <section className="NewProduct mt-[80px]">
       <div className="container">
@@ -66,4 +66,4 @@ const NewProduct = () => {
   );
 };
 
-export default NewProduct;
+export default ByBrend;
