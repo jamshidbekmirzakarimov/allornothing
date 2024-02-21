@@ -1,5 +1,5 @@
 import React from "react";
-import { AllMenu, ByBrend, Hero, NewProduct, NewProductCard } from "../../Modules";
+import { AllMenu, AllProduct, ByBrend, Hero, NewProduct, NewProductCard } from "../../Modules";
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
       <NewProduct />
       <NewProductCard/>
       <ByBrend/>
+      <AllProduct/>
     </>
   );
 };

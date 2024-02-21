@@ -3,55 +3,53 @@ import "./ByBrend.scss";
 import SectionName from "../../constants/SectionName/SectionName";
 import SeeAll from "../../assets/svg/seeall.svg";
 import arrowRight from "../../assets/svg/arrowRight.svg";
-import Newproduct1 from "../../assets/images/newproduct1.png";
-import Newproduct2 from "../../assets/images/newproduct2.png";
-import Newproduct3 from "../../assets/images/newproduct3.png";
-import Newproduct4 from "../../assets/images/newproduct4.png";
-import Newproduct5 from "../../assets/images/newproduct5.png";
-import Newproduct6 from "../../assets/images/newproduct6.png";
-import Newproduct7 from "../../assets/images/newproduct7.png";
-import Newproduct8 from "../../assets/images/newproduct8.png";
+import Adidas from "../../assets/images/adidas.png";
+import North from "../../assets/images/north.png";
+import fourBrend from "../../assets/images/fourBrend.png";
+import offwhite from "../../assets/images/offwhite.svg";
+import bape from "../../assets/images/bape.png";
+import fourBrend2 from "../../assets/images/fourBrend2.png";
+import supreme from "../../assets/images/supreme.png";
+import gap from "../../assets/images/gap.png";
 
 const imagePaths = [
-  Newproduct1,
-  Newproduct2,
-  Newproduct3,
-  Newproduct4,
-  Newproduct5,
-  Newproduct6,
-  Newproduct7,
-  Newproduct8,
+  Adidas,
+  North,
+  fourBrend,
+  offwhite,
+  bape,
+  fourBrend2,
+  supreme,
+  gap,
 ];
 
 const ByBrend = () => {
   return (
-    <section className="NewProduct mt-[80px]">
+    <section className="NewProduct mt-[80px] ">
       <div className="container">
         <SectionName>News product</SectionName>
         <div className="grid grid-cols-[auto_1fr]">
-          <div className="me-[64px]">
+          <div className="me-[48px]">
             <p className="text-white text-[64px] font-semibold uppercase w-full max-w-[500px] leading-normal">
-              We have new products
+            selection by brands
             </p>
             <button className="bg-[#F6CE3C] py-[10px] px-[25px] rounded-[34px] flex items-center gap-[10px]">
-              <img src={SeeAll} alt="" />
+              <h2 className="uppercase font-normal text-[16px] leading-[22px] mb-[-2px]">by brand</h2>
               <img className="w-[22px] h-[14px]" src={arrowRight} alt="" />
             </button>
           </div>
-          <div className="New-list">
+          <div className="New-listBrend">
             {imagePaths.map((imagePath, index) => (
               <div
                 key={index}
-                className={`newitems-${
+                className={`newitemsBrend-${
                   index + 1
-                } bg-[#E6E6E6] rounded-[20px] flex items-center justify-center ${
-                  index === 1 || index === 6 ? "overflow-hidden" : ""
-                }`}
+                } bg-[#F5F5F5] rounded-[20px] flex items-center justify-center `}
               >
                 <img
                   className={
-                    index === 1 || index === 6
-                      ? "object-cover w-full h-full"
+                    index === 2 
+                      ? "w-full h-full"
                       : ""
                   }
                   src={imagePath}
