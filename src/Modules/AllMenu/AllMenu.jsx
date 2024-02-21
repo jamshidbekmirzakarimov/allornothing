@@ -18,7 +18,7 @@ const AllMenu = () => {
               <h3 className="text-[#0f0f0f] uppercase text-[48px] font-bold leading-normal">
                 caps
               </h3>
-              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#5BF1CD] py-[10px] px-[20px]">
+              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#FFFFFF] py-[10px] px-[20px]">
                 <img src={ShopNow} alt="" />
                 <img className="w-[22px] h-[11px]" src={arrowRight} alt="" />
               </button>
@@ -31,7 +31,7 @@ const AllMenu = () => {
               <h3 className="text-[#0f0f0f] uppercase text-[48px] font-bold leading-normal">
                Jackets
               </h3>
-              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#93B5E3] py-[10px] px-[20px]">
+              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#FFFFFF] py-[10px] px-[20px]">
                 <img src={ShopNow} alt="" />
                 <img className="w-[22px] h-[11px]" src={arrowRight} alt="" />
               </button>
@@ -44,7 +44,7 @@ const AllMenu = () => {
               <h3 className="text-[#0f0f0f] uppercase text-[48px] font-bold leading-normal">
               trousers  
               </h3>
-              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#F7D96E] py-[10px] px-[20px]">
+              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#FFFFFF] py-[10px] px-[20px]">
                 <img src={ShopNow} alt="" />
                 <img className="w-[22px] h-[11px]" src={arrowRight} alt="" />
               </button>
@@ -57,7 +57,7 @@ const AllMenu = () => {
               <h3 className="text-[#0f0f0f] uppercase text-[48px] font-bold leading-normal">
                 SNAKERS
               </h3>
-              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#B85BF0] py-[10px] px-[20px]">
+              <button className="flex items-center gap-[10px] rounded-[34px] bg-[#FFFFFF] py-[10px] px-[20px]">
                 <img src={ShopNow} alt="" />
                 <img className="w-[22px] h-[11px]" src={arrowRight} alt="" />
               </button>
