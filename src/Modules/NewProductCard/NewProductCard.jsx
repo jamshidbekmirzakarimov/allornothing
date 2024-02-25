@@ -3,7 +3,7 @@ import SectionName from "../../constants/SectionName/SectionName";
 import Newproduct6 from "../../assets/images/newproduct6.png";
 import Like from "../../assets/svg/like.svg";
 import Card from "../../constants/Card/Card";
-import Product from "../../api/api"
+import Product from "../../api/api";
 const NewProductCard = ({ action }) => {
   return (
     <section className="mt-[80px]">
@@ -13,8 +13,9 @@ const NewProductCard = ({ action }) => {
           {Product.slice(0, 8).map((product, index) => (
             <Card
               key={index}
+              id={product.id}
               action={product.action}
-              image={product.image}
+              image={product.image[0]}
               title={product.title}
               price={product.price}
               delprice={product.delprice}

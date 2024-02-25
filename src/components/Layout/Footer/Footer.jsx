@@ -2,7 +2,7 @@ import React from "react";
 import Mailo from "../../../assets/svg/mailo.svg";
 import Instagram from "../../../assets/svg/instagram.svg";
 import Facebook from "../../../assets/svg/facebook.svg";
-import Telegram from "../../../assets/svg/telegram.svg"
+import Telegram from "../../../assets/svg/telegram.svg";
 const Footer = () => {
   return (
     <>
@@ -58,25 +58,40 @@ const Footer = () => {
               <div className="w-[1px] h-[44px] bg-[#333333] me-[100px]"></div>
               <ul className="flex items-center gap-[14px]">
                 <li>
-                  <a className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]" href="https://www.instagram.com/all_or_nothing_shop">
+                  <a
+                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                    href="https://www.instagram.com/all_or_nothing_shop"
+                  >
                     <img src={Instagram} alt="" />
                   </a>
                 </li>
                 <li>
-                  <a className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]" href="https://www.facebook.com/allornothinshop/">
+                  <a
+                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                    href="https://www.facebook.com/allornothinshop/"
+                  >
                     <img src={Facebook} alt="" />
                   </a>
                 </li>
                 <li>
-                  <a className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]" href="https://t.me/all_or_nothing_shop">
+                  <a
+                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                    href="https://t.me/all_or_nothing_shop"
+                  >
                     <img src={Telegram} alt="" />
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="ps-[40px] pt-[16px] pb-[14px]">
-            <p className="roboto text-[12px] leading-[14px] font-normal text-white opacity-60">Designer by: <span className="text-[red] opacity-100 font-medium">Og’abek Yusuf</span></p>
+          <div className="ps-[40px] pt-[16px] pb-[14px] flex items-center gap-[9px]">
+            <p className="roboto text-[12px] leading-[14px] font-normal text-[#7B7B7B]">
+              Designer by:{" "}
+              <span className="text-[#fff] font-medium">Og’abek Yusuf</span>
+            </p>
+            <p className="text-white font-normal text-[12px] leading-[14px] opacity-60 roboto">
+              Getter.com December - 2022 year
+            </p>
           </div>
         </div>
       </footer>

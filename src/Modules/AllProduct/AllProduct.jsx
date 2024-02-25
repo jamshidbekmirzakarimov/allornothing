@@ -27,7 +27,7 @@ const AllProduct = () => {
               <Card
                 key={index}
                 action={product.action}
-                image={product.image}
+                image={product.image[0]}
                 title={product.title}
                 price={product.price}
                 delprice={product.delprice}
