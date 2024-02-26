@@ -1,4 +1,4 @@
-import Newproduct6 from "../assets/images/newproduct6.png";
+import Newproduct6 from "../assets/images/branjlet.jpg";
 
 const Products = [
   {

@@ -26,9 +26,31 @@
     .swiper-button-prev{
         position: absolute;
         left: 20px;
+        &::after{
+            content: "";
+            width: 36px;
+            height: 36px;
+            background-color: #D9D9D9;
+            background-image: url(../../assets/svg/swipeArrowLeft.svg);
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: center center;
+            border-radius: 8px;
+        }
     }
     .swiper-button-next{
         position: absolute;
         right: 20px;
+        &::after{
+            content: "";
+            width: 36px;
+            height: 36px;
+            background-color: #D9D9D9;
+            background-image: url(../../assets/svg/swipeArrowright.svg);
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: center center;
+            border-radius: 8px;
+        }
     }
 }
