@@ -37,46 +37,42 @@ const Category = [
     },
     {
         id: 10,
-        title: "collection"
-    },
-    {
-        id: 11,
         title: "snakers"
     },
     {
-        id: 12,
+        id: 11,
         title: "zanjir"
     },
     {
-        id: 13,
+        id: 12,
         title: "soqqa"
     },
     {
-        id: 14,
+        id: 13,
         title: "blezzr"
     },
     {
-        id: 15,
+        id: 14,
         title: "Jacket"
     },
     {
-        id: 16,
+        id: 15,
         title: "collection"
     },
     {
-        id: 17,
+        id: 16,
         title: "olimpika"
     },
     {
-        id: 18,
+        id: 17,
         title: "Caps"
     },
     {
-        id: 19,
+        id: 18,
         title: "Adidas"
     },
     {
-        id: 20,
+        id: 19,
         title: "Blezzers"
     },
 ]
