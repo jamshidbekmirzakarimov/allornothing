@@ -3,15 +3,14 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import ArrowLeft from "../../assets/svg/arrowleft.svg";
 import ArrowRight from "../../assets/svg/arrowleft.svg";
 import Categorys from "../../api/category";
-import "./Men.scss";
 import Products from "../../api/api";
 import Card from "../../constants/Card/Card";
 import { useState } from "react";
 import PaginationLeft from "../../assets/svg/pagination-arrow-left.svg"
 import PaginationRight from "../../assets/svg/pagination-arrow-right.svg"
 import PathBack from "../../constants/PathBack/PathBack";
-import { NewProductCard } from "../../Modules";
-const Men = () => {
+import { NewProduct, NewProductCard } from "../../Modules";
+const Collection = () => {
   const { id } = useParams();
   console.log(id, "category idlar");
   const location = useLocation();
@@ -133,4 +132,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default Collection;
