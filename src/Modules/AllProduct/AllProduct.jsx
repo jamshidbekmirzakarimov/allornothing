@@ -26,6 +26,7 @@ const AllProduct = () => {
             {Product.slice(0, add).map((product, index) => (
               <Card
                 key={index}
+                id={product.id}
                 action={product.action}
                 image={product.image[0]}
                 title={product.title}

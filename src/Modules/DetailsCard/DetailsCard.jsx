@@ -18,6 +18,8 @@ import Card from "../../constants/Card/Card";
 import { useState } from "react";
 import SectionName from "../../constants/SectionName/SectionName";
 import AllProduct from "../AllProduct/AllProduct";
+import { FaHeart } from "react-icons/fa";
+
 const DetailsCard = () => {
   const { id } = useParams();
 
@@ -29,6 +31,27 @@ const DetailsCard = () => {
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
+
+  const [reload, setReload] = useState(false);
+  const likeCheck = () => {
+    const newdata = JSON?.parse(localStorage?.getItem("like"));
+    return newdata?.filter((item) => item === id).length > 0;
+  };
+
+  function addTolike() {
+    setReload((prev) => !prev);
+    let storedLike = JSON.parse(localStorage.getItem("like")) || [];
+    storedLike.push(id);
+    localStorage.setItem("like", JSON.stringify(storedLike));
+    toast.success("Add to like ");
+  }
+
+  function removeTolike() {
+    setReload((prev) => !prev);
+    let storedLike = JSON.parse(localStorage.getItem("like")) || [];
+    const removData = storedLike?.filter((item) => item !== id);
+    localStorage?.setItem("like", JSON?.stringify(removData));
+  }
   return (
     <>
       <section className="DetailsCard pt-[2px] border-b-[1px] pb-[20px] border-[#333333]">
@@ -61,10 +84,14 @@ const DetailsCard = () => {
                     <div className="flex items-center justify-center w-[600px] h-[650px] bg-transparent">
                       <div className="relative flex items-center justify-center bg-[#fff] w-[600px] h-[600px] rounded-[24px]">
                         <img width={480} height={480} src={items} alt="" />
-                        <img
-                          className="cursor-pointer absolute top-[20px] right-[20px]"
-                          src={Like}
-                          alt=""
+
+                        <FaHeart
+                          onClick={() =>
+                            likeCheck() ? removeTolike() : addTolike()
+                          }
+                          size={20}
+                          className="absolute top-[17px] right-[16px] cursor-pointer"
+                          color={likeCheck() ? "red" : "#666666"}
                         />
                       </div>
                     </div>
@@ -86,12 +113,12 @@ const DetailsCard = () => {
                       </p>{" "}
                       <div className="w-[4px] h-[4px] rounded-[50%] bg-[#0F0F0F]"></div>
                       <p className="font-semibold text-[16px] leading-[21px]">
-                        {product.price}{" "}
+                        {product.price}{" "}<span>uzs</span>
                       </p>
                     </div>
                   </div>
                   <p className="font-normal text-[14px] leading-[18px] text-[#999999]">
-                    <del>{product.delprice}</del>
+                    <del>{product.delprice}</del> <span>uzs</span>
                   </p>
                 </div>
                 <div className="roboto flex items-center justify-between pb-[32px] mb-[32px] border-b-[1px] border-[#262626]">

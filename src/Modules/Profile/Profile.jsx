@@ -8,7 +8,7 @@ import adidasterrex from "../../assets/images/adidas-terrex-multi-rain.png"
 const Profile = () => {
   return (
     <>
-      <section>
+      <section className="px-[56px]">
         <div className="flex gap-[122px]">
           <form className="w-[530px]">
             <div className="flex flex-col mb-[24px]">

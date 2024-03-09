@@ -1,13 +1,15 @@
-.Men{
+
     /* width */
 ::-webkit-scrollbar {
   width: 5px;
+
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 20px;
+  
 }
 
 /* Handle */
@@ -20,5 +22,4 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
 }
