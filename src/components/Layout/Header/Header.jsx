@@ -12,7 +12,10 @@ import Profile from "../../../Modules/Profile/Profile";
 import LikeCard from "../../../Modules/LikeCard/LikeCard";
 import BasketCard from "../../../Modules/BasketCard/BasketCard";
 const Header = () => {
-  let storedData = localStorage?.getItem("like") !== null ? JSON.parse(localStorage.getItem("like")) : [];
+  let storedData =
+    localStorage?.getItem("like") !== null
+      ? JSON.parse(localStorage.getItem("like"))
+      : [];
   const filteredData = LikeCard(storedData);
   console.log(storedData, "filteredData qalemi");
   const [activeMenu, setActiveMenu] = useState(null);
@@ -42,7 +45,7 @@ const Header = () => {
     setShowComponent(false);
   };
 
-let like = localStorage.getItem("like")
+  let like = localStorage.getItem("like");
   return (
     <header
       className="site-header py-[5px] w-full  relative z-50"
@@ -126,7 +129,11 @@ let like = localStorage.getItem("like")
                     onClick={() => handleMenuClick("like")}
                   >
                     <img src={Heart} alt="" />
-                    {storedData.length > 0 ? <div className="w-[4px] h-[4px] bg-[#FB1919] rounded"></div>: ""}
+                    {storedData.length > 0 ? (
+                      <div className="w-[4px] h-[4px] bg-[#FB1919] rounded"></div>
+                    ) : (
+                      ""
+                    )}
                   </Link>
                 </div>
                 <div className="w-[1px] h-[16px] bg-[#BFBFBF] me-[16px]"></div>
@@ -292,59 +299,59 @@ let like = localStorage.getItem("like")
 
               {activeMenu === "like" && (
                 <div className="">
-                <div className="mx-[56px]">
-                <div className=" w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] ">
-                    <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
-                      Like
-                    </h2>
-                    <button
-                      className="close-button border-s-[1px] border-[#333] ps-[21px] "
-                      onClick={handleCloseButtonClick}
-                    >
-                      <img src={Close} alt="" />
-                    </button>
+                  <div className="mx-[56px]">
+                    <div className=" w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] ">
+                      <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
+                        Like
+                      </h2>
+                      <button
+                        className="close-button border-s-[1px] border-[#333] ps-[21px] "
+                        onClick={handleCloseButtonClick}
+                      >
+                        <img src={Close} alt="" />
+                      </button>
+                    </div>
                   </div>
-                </div>
-                  <div className="h-[500px] overflow-auto">
-                  <LikeCard />
+                  <div className="h-[500px] px-[56px] overflow-auto">
+                    <LikeCard />
                   </div>
                 </div>
               )}
               {activeMenu === "basket" && (
                 <div>
                   <div className="mx-[56px]">
-                  <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
-                    <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
-                      Karzinka
-                    </h2>
-                    <button
-                      className="close-button border-s-[1px] border-[#333] ps-[21px] "
-                      onClick={handleCloseButtonClick}
-                    >
-                      <img src={Close} alt="" />
-                    </button>
+                    <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
+                      <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
+                        Karzinka
+                      </h2>
+                      <button
+                        className="close-button border-s-[1px] border-[#333] ps-[21px] "
+                        onClick={handleCloseButtonClick}
+                      >
+                        <img src={Close} alt="" />
+                      </button>
+                    </div>
                   </div>
+                  <div className="h-[500px] overflow-auto px-[56px]">
+                    <BasketCard />
                   </div>
-                 <div className="h-[500px] overflow-auto px-[56px]">
-                 <BasketCard/>
-                 </div>
                 </div>
               )}
               {activeMenu === "profile" && (
                 <div>
-                 <div className="mx-[56px]">
-                 <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
-                    <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
-                      Profile
-                    </h2>
-                    <button
-                      className="close-button border-s-[1px] border-[#333] ps-[21px] "
-                      onClick={handleCloseButtonClick}
-                    >
-                      <img src={Close} alt="" />
-                    </button>
+                  <div className="mx-[56px]">
+                    <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
+                      <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
+                        Profile
+                      </h2>
+                      <button
+                        className="close-button border-s-[1px] border-[#333] ps-[21px] "
+                        onClick={handleCloseButtonClick}
+                      >
+                        <img src={Close} alt="" />
+                      </button>
+                    </div>
                   </div>
-                 </div>
                   <Profile />
                 </div>
               )}

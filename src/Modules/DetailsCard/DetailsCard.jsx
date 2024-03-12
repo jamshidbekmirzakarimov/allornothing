@@ -35,13 +35,13 @@ const DetailsCard = () => {
   const [reload, setReload] = useState(false);
   const likeCheck = () => {
     const newdata = JSON?.parse(localStorage?.getItem("like"));
-    return newdata?.filter((item) => item === id).length > 0;
+    return newdata?.filter((item) => item === product.id).length > 0;
   };
 
   function addTolike() {
     setReload((prev) => !prev);
     let storedLike = JSON.parse(localStorage.getItem("like")) || [];
-    storedLike.push(id);
+    storedLike.push(product.id);
     localStorage.setItem("like", JSON.stringify(storedLike));
     toast.success("Add to like ");
   }
@@ -49,9 +49,34 @@ const DetailsCard = () => {
   function removeTolike() {
     setReload((prev) => !prev);
     let storedLike = JSON.parse(localStorage.getItem("like")) || [];
-    const removData = storedLike?.filter((item) => item !== id);
+    const removData = storedLike?.filter((item) => item !== product.id);
     localStorage?.setItem("like", JSON?.stringify(removData));
   }
+
+  // Add to Basket
+  const cartCheck = () => {
+    const newdata = JSON?.parse(localStorage?.getItem("value"));
+    return newdata?.filter((item) => item === product.id).length > 0;
+  };
+
+  function addTocart() {
+    setReload((prev) => !prev);
+    let storedCart = JSON.parse(localStorage.getItem("value")) || [];
+    storedCart.push(product.id);
+    localStorage.setItem("value", JSON.stringify(storedCart));
+    if (product.id) {
+      message.success("Siz kashelokka mahsulot qo'shdingiz!");
+    } else {
+    }
+  }
+
+  function removeTocart() {
+    setReload((prev) => !prev);
+    let storedCart = JSON.parse(localStorage.getItem("value")) || [];
+    const removData = storedCart?.filter((item) => item !== product.id);
+    localStorage?.setItem("value", JSON?.stringify(removData));
+  }
+
   return (
     <>
       <section className="DetailsCard pt-[2px] border-b-[1px] pb-[20px] border-[#333333]">
@@ -113,7 +138,7 @@ const DetailsCard = () => {
                       </p>{" "}
                       <div className="w-[4px] h-[4px] rounded-[50%] bg-[#0F0F0F]"></div>
                       <p className="font-semibold text-[16px] leading-[21px]">
-                        {product.price}{" "}<span>uzs</span>
+                        {product.price} <span>uzs</span>
                       </p>
                     </div>
                   </div>
@@ -161,7 +186,10 @@ const DetailsCard = () => {
                   <button className="w-[49%] border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black ">
                     BUY NOW
                   </button>
-                  <button className="w-[49%] border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black ">
+                  <button
+                    onClick={() => (cartCheck() ? removeTocart() : addTocart())}
+                    className={`w-[49%] border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black  ${cartCheck() ? "bg-[#F6CE3C] text-black" : ""} `}
+                  >
                     add to cart
                   </button>
                 </div>

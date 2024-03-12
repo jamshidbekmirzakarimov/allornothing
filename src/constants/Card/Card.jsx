@@ -78,18 +78,7 @@ const Card = ({ action, image, title, price, delprice, color, id }) => {
                 {title}
               </h3>
             </Link>
-            <div
-              className={`w-[40px] h-[40px] border-[1px] border-[#F6CE3C] rounded-[50%] flex items-center justify-center me-[10px] ${
-                cartCheck() ? "bg-[#F6CE3C]" : ""
-              } `}
-            >
-              <SlBasket
-                onClick={() => (cartCheck() ? removeTocart() : addTocart())}
-                className=" cursor-pointer"
-                size={18}
-                color={cartCheck() ? "black" : "white"}
-              />
-            </div>
+        
           </div>
           <div className="flex items-center gap-[14px]">
             <p className="text-[#999999] font-semibold text-[16px]">{price} <span>uzs</span></p>
