@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { SlBasket } from "react-icons/sl";
 import toast, { Toaster } from "react-hot-toast";
-const Card = ({ action, image, title, price, delprice, color, id }) => {
+const Card = ({ action, image, title, price, delprice, color, id, className }) => {
   const [reload, setReload] = useState(false);
   const likeCheck = () => {
     const newdata = JSON?.parse(localStorage?.getItem("like"));
@@ -53,7 +53,7 @@ const Card = ({ action, image, title, price, delprice, color, id }) => {
 
   return (
     <>
-      <li className="w-[24%] min-h-[461px]">
+      <li className={`max-w-[330px] min-h-[461px] ${className}`}>
         <div className="w-full bg-white rounded-[12px] flex items-center justify-center h-[380px] relative overflow-hidden">
           <div
             className={`absolute top-0 left-0 py-[7px] px-[15px] text-white font-normal text-[12px] rounded-tl-[12px] rounded-br-[12px] bg-[${color}]`}

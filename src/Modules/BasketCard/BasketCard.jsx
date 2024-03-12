@@ -161,11 +161,13 @@ rounded-[6px] text-[#BFBFBF] w-[32px] h-[28px] bg-[#333333]"
             </button>
             <div className="flex items-center gap-[5px] mb-[8px]">
               <div className="w-[64px] h-[1px] bg-[#666666]"></div>
-              <p className="uppercase text-[8px] leading-[11px] font-bold text-[#999999]">or</p>
+              <p className="uppercase text-[8px] leading-[11px] font-bold text-[#999999]">
+                or
+              </p>
               <div className="w-[64px] h-[1px] bg-[#666666]"></div>
             </div>
             <button className="w-[320px] uppercase bg-[#F6CE3C] text-[#0F0F0F] font-bold text-[16px] leading-[22px] pt-[17px] pb-[17px] rounded-[30px] mb-[8px]">
-            clearance
+              clearance
             </button>
           </div>
         </div>

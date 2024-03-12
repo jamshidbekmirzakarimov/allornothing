@@ -21,10 +21,11 @@ const AllProduct = () => {
           <SectionName>News product</SectionName>
           <ul
             ref={cardListRef}
-            className="flex w-full gap-x-[12px] gap-y-[48px] flex-wrap"
+            className="flex w-full justify-between gap-y-[48px] flex-wrap"
           >
             {Product.slice(0, add).map((product, index) => (
               <Card
+              className={"w-[24%]"}
                 key={index}
                 id={product.id}
                 action={product.action}

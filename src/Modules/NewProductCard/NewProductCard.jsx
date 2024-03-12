@@ -11,7 +11,7 @@ const NewProductCard = ({ action }) => {
         <SectionName>News product</SectionName>
         <ul className="flex w-full gap-x-[12px] gap-y-[48px]  flex-wrap">
           {Product.slice(0, 8).map((product, index) => (
-            <Card
+            <Card className={"w-[24%]"}
               key={index}
               id={product.id}
               action={product.action}

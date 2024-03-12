@@ -24,7 +24,7 @@ const LikeCard = () => {
 
   return (
     <section className="wrapper like-container">
-     <ul className="flex justify-between h-[500px] overflow-auto flex-wrap gap-y-[30px] pe-[10px]">
+     <ul className="flex flex-wrap justify-between w-full gap-y-[30px]">
      {filterData().length > 0 ? (
         filterData().map((data, index) => (
           <Card
