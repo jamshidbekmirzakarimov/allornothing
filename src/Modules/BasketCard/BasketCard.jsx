@@ -56,7 +56,7 @@ const BasketCard = () => {
               <div>
                 <div
                   key={index}
-                  className="flex w-[676px] min-h-[192px] gap-[32px] pb-[32px] border-b-[1px] border-[#333333] mb-[32px] last:mb-[0px] last:border-[0px]"
+                  className="flex w-[676px] max-[790px]:w-full min-h-[192px] gap-[32px] max-[500px]:gap-[10px] pb-[32px] border-b-[1px] border-[#333333] mb-[32px] last:mb-[0px] last:border-[0px]"
                 >
                   <img
                     className="rounded-[16px]"
@@ -73,7 +73,7 @@ const BasketCard = () => {
                         </h3>
                         <div className="flex items-center gap-[16px]">
                           <div className="flex items-center gap-[7px]">
-                            <p className="roboto text-white font-medium">
+                            <p className="roboto text-white font-medium max-[500px]:hidden">
                               Size:
                             </p>
                             <button className="flex items-center justify-center roboto w-[32px] h-[32px] rounded-[8px] bg-[#333333] text-white">
@@ -82,7 +82,7 @@ const BasketCard = () => {
                           </div>
                           <div className="w-[1px] h-[16px] rounded-[1px] bg-[#333333]"></div>
                           <div className="flex items-center gap-[7px]">
-                            <p className="roboto text-white font-medium ">
+                            <p className="roboto text-white font-medium max-[500px]:hidden">
                               Color:{" "}
                             </p>
                             <div className="w-[32px] h-[32px] rounded-[50%] border-[1px] border-[#265AD9] p-[4px]">
@@ -95,8 +95,8 @@ const BasketCard = () => {
                         ...
                       </p>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px]">
+                    <div className="flex items-center justify-between max-[790px]:flex-col max-[790px]:items-start gap-[10px]">
+                      <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px]">
                         <div className="flex items-center gap-[10px]">
                           <p className="font-medium text-[14px] leading-[21px] text-white">
                             {data.action}
@@ -134,7 +134,7 @@ rounded-[6px] text-[#BFBFBF] w-[32px] h-[28px] bg-[#333333]"
             </div>
           )}
         </div>
-        <div className="flex items-center justify-center w-[440px] h-[306px] rounded-[16px] bg-[#33333399]">
+        <div className="flex items-center justify-center w-[440px] h-[306px] rounded-[16px] bg-[#33333399] max-[1120px]:hidden">
           <div className="flex items-center justify-center flex-col">
             <div className="flex items-center gap-[16px] mb-[24px]">
               <div className="flex items-center gap-[5px]">

@@ -56,7 +56,7 @@ const Header = () => {
       <div className="relative">
         <div className="container ">
           <div className="site-header-wrapper relative w-full p-[4px] flex items-center flex-col">
-            <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] flex items-center justify-between w-full rounded-[12px]">
+            <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] max-[400px]:pe-[4px] flex items-center justify-between w-full rounded-[12px]">
               <div className="flex items-center h-full">
                 <Link to="/">
                   <img className="pe-[20px] max-[450px]:pe-[0]" src={Logo} alt="logo" />
@@ -322,7 +322,7 @@ const Header = () => {
 
                 {activeMenu === "like" && (
                   <div className="">
-                    <div className="mx-[56px]">
+                    <div className="mx-[56px] max-[500px]:mx-[10px]">
                       <div className=" w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] ">
                         <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
                           Like
@@ -335,14 +335,14 @@ const Header = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="h-[500px] px-[56px] overflow-auto">
+                    <div className="h-[500px] px-[56px] max-[500px]:px-[10px] overflow-auto">
                       <LikeCard />
                     </div>
                   </div>
                 )}
                 {activeMenu === "basket" && (
                   <div>
-                    <div className="mx-[56px]">
+                    <div className="mx-[56px] max-[500px]:mx-[10px]">
                       <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
                         <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
                           Karzinka
@@ -355,14 +355,14 @@ const Header = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="h-[500px] overflow-auto px-[56px]">
+                    <div className="h-[500px] overflow-auto px-[56px] max-[500px]:px-[10px]">
                       <BasketCard />
                     </div>
                   </div>
                 )}
                 {activeMenu === "profile" && (
                   <div>
-                    <div className="mx-[56px]">
+                    <div className="mx-[56px] max-[500px]:mx-[10px]">
                       <div className="w-full flex items-center justify-between pb-[10px] mb-[20px] border-b-[1px] border-[#333] px-[8px]">
                         <h2 className="font-bold leading-[22px] text-[16px] text-[#fff] uppercase">
                           Profile

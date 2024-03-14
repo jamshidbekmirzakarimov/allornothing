@@ -8,9 +8,9 @@ import adidasterrex from "../../assets/images/adidas-terrex-multi-rain.png"
 const Profile = () => {
   return (
     <>
-      <section className="px-[56px]">
+      <section className="px-[56px] max-[500px]:px-[10px]">
         <div className="flex gap-[122px]">
-          <form className="w-[530px]">
+          <form className="w-[530px] max-[1190px]:w-full">
             <div className="flex flex-col mb-[24px]">
               <label
                 className="roboto ps-[5px] font-normal text-[14px] leading-[20px] text-[#D9D9D9] mb-[8px]"
@@ -107,7 +107,7 @@ const Profile = () => {
               </button>
             </div>
           </form>
-          <div className="flex flex-wrap w-[644px] justify-between mt-[30px] gap-[10px]">
+          <div className="flex flex-wrap w-[644px] justify-between mt-[30px] gap-[10px] max-[1190px]:hidden">
             <div className="w-[49%] bg-[#FCFCFC] h-[50%] rounded-[12px] overflow-hidden flex items-center justify-center relative">
               <img className="" src={JacketsProfile} alt="" />
               <div className="absolute w-full flex items-center justify-between bottom-[20px] px-[20px]">
