@@ -59,7 +59,7 @@ const Header = () => {
             <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] flex items-center justify-between w-full rounded-[12px]">
               <div className="flex items-center h-full">
                 <Link to="/">
-                  <img className="pe-[20px]" src={Logo} alt="logo" />
+                  <img className="pe-[20px] max-[450px]:pe-[0]" src={Logo} alt="logo" />
                 </Link>
 
                 <ul className="flex h-full max-[1050px]:hidden">
