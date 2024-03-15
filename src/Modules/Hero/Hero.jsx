@@ -33,7 +33,7 @@ const Hero = () => {
                 <div className="hero-wrap rounded-[20px] h-[480px] max-[800px]:h-[520px] mt-[30px]">
                   <div className="relative">
                     <div className="relative pt-[80px] max-[800px]:pt-[60px] max-[] ps-[80px] max-[800px]:ps-[40px] w-[736px] h-[197px]">
-                      <button className="hero_btn absolute bottom-[-5px] right-[-70px] max-[800px]:left-[40px] max-[800px]:bottom-[-100px] max-[680px]:bottom-[-20px] max-w-[300px] max-[680px]:max-w-[260px] bg-[#265AD9] py-[26px] px-[37px] max-[680px]:py-[20px] max-[680px]:px-[20px] rounded-[110px] text-[24px] max-[480px]:text-[20px] max-[480px]:py-[10px] max-[480px]:px-[10px] max-[480px]:bottom-[50px] font-semibold uppercase leading-normal text-black">
+                      <button className="hero_btn absolute bottom-[-5px] right-[-70px] max-[800px]:left-[40px] max-[800px]:bottom-[-100px] max-[680px]:bottom-[-20px] max-w-[300px] max-[680px]:max-w-[260px] bg-[#265AD9] py-[26px] px-[37px] max-[680px]:py-[20px] max-[680px]:px-[20px] rounded-[110px] text-[24px] max-[480px]:text-[20px] max-[480px]:py-[10px] max-[480px]:px-[10px] max-[480px]:bottom-[50px] max-[480px]:w-[200px] max-[480px]:ps-[20px] max-[480px]:pt-[20px] font-semibold uppercase leading-normal text-black">
                         <div className="flex items-center gap-[32px]">
                           <p className=" text-white">view now all</p>
                           <img
