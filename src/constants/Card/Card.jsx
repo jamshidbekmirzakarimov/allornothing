@@ -53,8 +53,8 @@ const Card = ({ action, image, title, price, delprice, color, id, className }) =
 
   return (
     <>
-      <li className={`max-w-[330px] min-h-[461px] ${className}`}>
-        <div className="w-full bg-white rounded-[12px] flex items-center justify-center h-[380px] relative overflow-hidden">
+      <li className={`max-w-[315px] max-[680px]:max-w-[245px] min-h-[461px] max-[680px]:min-h-[361px] max-[530px]:max-w-[100%] ${className}`}>
+        <div className="w-full bg-white rounded-[12px] max-[680px]:h-[280px] flex items-center justify-center h-[380px] relative overflow-hidden">
           <div
             className={`absolute top-0 left-0 py-[7px] px-[15px] text-white font-normal text-[12px] rounded-tl-[12px] rounded-br-[12px] bg-[${color}]`}
           >
@@ -68,7 +68,7 @@ const Card = ({ action, image, title, price, delprice, color, id, className }) =
             color={likeCheck() ? "red" : "#666666"}
           />
           <Link to={`/details/${id}`}>
-            <img src={image} alt="" />
+            <img width={200} height={200} src={image} alt="" />
           </Link>
         </div>
         <div className="mt-[12px]">

@@ -28,6 +28,7 @@ const LikeCard = () => {
      {filterData().length > 0 ? (
         filterData().map((data, index) => (
           <Card
+          className={"w-full"}
             key={index}
             id={data.id}
             action={data.action}

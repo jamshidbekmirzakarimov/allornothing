@@ -9,9 +9,9 @@ const NewProductCard = ({ action }) => {
     <section className="mt-[80px]">
       <div className="container">
         <SectionName>News product</SectionName>
-        <ul className="flex w-full gap-x-[12px] gap-y-[48px]  flex-wrap">
+        <ul className="flex w-full gap-y-[48px] justify-between max-[530px]:justify-center  flex-wrap">
           {Product.slice(0, 8).map((product, index) => (
-            <Card className={"w-[24%]"}
+            <Card className={"w-full"}
               key={index}
               id={product.id}
               action={product.action}

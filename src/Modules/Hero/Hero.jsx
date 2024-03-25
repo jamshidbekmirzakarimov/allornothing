@@ -32,10 +32,12 @@ const Hero = () => {
               <SwiperSlide>
                 <div className="hero-wrap rounded-[20px] h-[480px] max-[800px]:h-[520px] mt-[30px]">
                   <div className="relative">
-                    <div className="relative pt-[80px] max-[800px]:pt-[60px] max-[] ps-[80px] max-[800px]:ps-[40px] w-[736px] h-[197px]">
-                      <button className="hero_btn absolute bottom-[-5px] right-[-70px] max-[800px]:left-[40px] max-[800px]:bottom-[-100px] max-[680px]:bottom-[-20px] max-w-[300px] max-[680px]:max-w-[260px] bg-[#265AD9] py-[26px] px-[37px] max-[680px]:py-[20px] max-[680px]:px-[20px] rounded-[110px] text-[24px] max-[480px]:text-[20px] max-[480px]:py-[10px] max-[480px]:px-[10px] max-[480px]:bottom-[50px] max-[480px]:w-[200px] max-[480px]:ps-[20px] max-[480px]:pt-[20px] font-semibold uppercase leading-normal text-black">
+                    <div className=" pt-[80px] max-[800px]:pt-[60px] ps-[80px] max-[800px]:ps-[40px] w-[736px] h-[197px] max-[400px]:pt-[32px] max-[400px]:ps-[20px]">
+                      <button className="hero_btn absolute bottom-[-5px] left-[550px]  bg-[#265AD9] py-[26px] px-[37px]  rounded-[110px] text-[24px]   font-semibold uppercase leading-normal text-black max-[900px]:left-[40px] max-[900px]:bottom-[-50px] max-[580px]:bottom-[0px] max-[400px]:left-[20px] max-[580px]:py-[16px] max-[580px]:px-[25px] max-[480px]:bottom-[40px]">
                         <div className="flex items-center gap-[32px]">
-                          <p className=" text-white">view now all</p>
+                          <p className=" text-white max-[480px]:text-[15px] max-[580px]:text-[20px]">
+                            view now all
+                          </p>
                           <img
                             className="max-[680px]:w-[30px]"
                             src={arrowRight}
@@ -43,12 +45,18 @@ const Hero = () => {
                           />
                         </div>
                       </button>
-                      <div className="max-w-[736px] max-[800px]:max-w-[575px] max-[680px]:max-w-[400px] max-[480px]:max-w-[300px]">
-                        <img src={TextImg} alt="" />
+                      <div className="max-w-[736px] max-[800px]:max-w-[575px] max-[680px]:max-w-[400px] max-[480px]:max-w-[300px] max-[375px]:max-w-[250px]">
+                        <picture>
+                          <source
+                            media="(max--width: 350px)"
+                            srcset={arrowRight}
+                          />
+                          <img src={TextImg} />
+                        </picture>
                       </div>
                     </div>
                     <img
-                      className="absolute top-[30px] max-[800px]:top-[160px] right-0 w-[466px] h-[450px] max-[800px]:w-[372px] max-[800px]:h-[360px] max-[480px]:w-[250px] max-[480px]:h-[300px] max-[480px]:top-[220px]"
+                      className="absolute top-[30px] max-[800px]:top-[160px] right-0 w-[466px] h-[450px] max-[800px]:w-[372px] max-[800px]:h-[360px] max-[480px]:w-[354px] max-[480px]:h-[369px] max-[480px]:top-[155px] max-[480px]:right-[-60px]"
                       src={heroImg}
                       alt=""
                     />

@@ -56,7 +56,7 @@ const Header = () => {
       <div className="relative">
         <div className="container ">
           <div className="site-header-wrapper relative w-full p-[4px] flex items-center flex-col">
-            <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] max-[400px]:pe-[4px] flex items-center justify-between w-full rounded-[12px]">
+            <div className="bg-[#D9D9D9] pt-[4px] pb-[4px] ps-[4px] pe-[32px] max-[400px]:pe-[18px] flex items-center justify-between w-full rounded-[12px]">
               <div className="flex items-center h-full">
                 <Link to="/">
                   <img className="pe-[20px] max-[450px]:pe-[0]" src={Logo} alt="logo" />
