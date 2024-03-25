@@ -25,7 +25,7 @@ const AllProduct = () => {
           >
             {Product.slice(0, add).map((product, index) => (
               <Card
-              className={"w-[24%]"}
+              className={"w-full"}
                 key={index}
                 id={product.id}
                 action={product.action}

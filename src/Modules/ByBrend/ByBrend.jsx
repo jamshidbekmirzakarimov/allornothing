@@ -28,13 +28,15 @@ const ByBrend = () => {
     <section className="NewProduct mt-[80px] ">
       <div className="container">
         <SectionName>News product</SectionName>
-        <div className="grid grid-cols-[auto_1fr]">
-          <div className="me-[48px]">
-            <p className="text-white text-[64px] font-semibold uppercase w-full max-w-[500px] leading-normal">
-            selection by brands
+        <div className="grid grid-cols-[auto_1fr] max-[800px]:grid-cols-1">
+          <div className="me-[48px] max-[800px]:mb-[40px]">
+            <p className="text-white text-[64px] font-semibold uppercase w-full max-w-[500px] leading-normal max-[650px]:leading-[70px]   max-[650px]:text-[50px] max-[440px]:text-[45px] max-[405px]:text-[40px] max-[400px]:leading-[50px]">
+              selection by brands
             </p>
             <button className="bg-[#F6CE3C] py-[10px] px-[25px] rounded-[34px] flex items-center gap-[10px]">
-              <h2 className="uppercase font-normal text-[16px] leading-[22px] mb-[-2px]">by brand</h2>
+              <h2 className="uppercase font-normal text-[16px] leading-[22px] mb-[-2px]">
+                by brand
+              </h2>
               <img className="w-[22px] h-[14px]" src={arrowRight} alt="" />
             </button>
           </div>
@@ -47,11 +49,7 @@ const ByBrend = () => {
                 } bg-[#F5F5F5] rounded-[20px] flex items-center justify-center `}
               >
                 <img
-                  className={
-                    index === 2 
-                      ? "w-full h-full"
-                      : ""
-                  }
+                  className={index === 2 ? "w-full h-full" : ""}
                   src={imagePath}
                   alt=""
                 />

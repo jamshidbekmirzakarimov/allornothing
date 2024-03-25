@@ -30,7 +30,7 @@ const NewProduct = () => {
         <SectionName>News product</SectionName>
         <div className="grid grid-cols-[auto_1fr] max-[800px]:grid-cols-1">
           <div className="me-[64px] max-[800px]:mb-[41px]">
-            <p className="text-white text-[64px] font-semibold uppercase w-full max-w-[500px]  leading-normal max-[650px]:leading-[70px]  max-[650px]:text-[50px] max-[650px]:text-[50px] max-[440px]:text-[45px] max-[405px]:text-[40px] max-[400px]:leading-[50px]">
+            <p className="text-white text-[64px] font-semibold uppercase w-full max-w-[500px]  leading-normal max-[650px]:leading-[70px]   max-[650px]:text-[50px] max-[440px]:text-[45px] max-[405px]:text-[40px] max-[400px]:leading-[50px]">
               We have new products
             </p>
             <button className="bg-[#F6CE3C] py-[10px] px-[25px] rounded-[34px] flex items-center gap-[10px]">

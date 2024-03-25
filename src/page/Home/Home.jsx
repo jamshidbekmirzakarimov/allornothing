@@ -8,8 +8,8 @@ const Home = () => {
       <AllMenu/>
         <NewProduct />
         <NewProductCard/>
-        {/* <ByBrend/>
-        <AllProduct/> */}
+        <ByBrend/>
+        <AllProduct/>
     </>
   );
 };
