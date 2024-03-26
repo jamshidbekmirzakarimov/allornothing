@@ -12,10 +12,12 @@ const Footer = () => {
             <h2 className="text-[#F1C05B] text-[12px] leading-[16px] mb-[31px]">
               All or Nothing
             </h2>
-            <div className="flex items-center">
-              <div className="flex flex-col gap-y-[16px] me-[80px]">
+            
+            <div className="flex items-center max-[780px]:flex-col max-[780px]:items-start">
+             <div className="flex items-center max-[780px]:mb-[20px]">
+             <div className="flex flex-col gap-y-[16px] me-[80px] max-[800px]:me-[40px]">
                 <a
-                  className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white"
+                  className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap"
                   href="tel:+998998208008"
                 >
                   + 99 820 8008
@@ -27,15 +29,18 @@ const Footer = () => {
                   + 99 820 8008
                 </a>
               </div>
+
               <div className="flex flex-col gap-y-[16px] me-[80px]">
-                <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white">
+                <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap">
                   Biz haqimizda
                 </p>
-                <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white">
+                <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap">
                   Ish vaqti 11:00 - 23:00
                 </p>
               </div>
-              <div className="flex flex-col gap-y-[8px] me-[100px]">
+             </div>
+
+              <div className="flex flex-col gap-y-[8px] me-[100px] max-[800px]:me-[0] max-[780px]:mb-[20px]">
                 <a
                   className="flex items-center max-w-[223px] bg-[#808080] gap-[8px] py-[6px] px-[12px] rounded-[8px]"
                   href="mailto:allornothing.uz@gmail.com"
@@ -55,8 +60,9 @@ const Footer = () => {
                   </p>
                 </a>
               </div>
-              <div className="w-[1px] h-[44px] bg-[#333333] me-[100px]"></div>
-              <ul className="flex items-center gap-[14px]">
+
+              <div className="w-[1px] h-[44px] bg-[#333333] me-[100px] max-[800px]:hidden"></div>
+              <ul className="flex items-center gap-[14px] max-[800px]:hidden">
                 <li>
                   <a
                     className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
@@ -93,7 +99,9 @@ const Footer = () => {
               Getter.com December - 2022 year
             </p>
           </div>
+          
         </div>
+        
       </footer>
     </>
   );

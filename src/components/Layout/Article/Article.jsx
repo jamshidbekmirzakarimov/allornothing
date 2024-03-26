@@ -7,7 +7,7 @@ const Article = () => {
     <>
       <article className="pt-[140px] max-[800px]:pt-[80px] mb-[8px]">
         <div className="container">
-          <div className="flex items-end justify-between bg-[#6EAEE3] rounded-[24px]">
+          <div className="flex items-end justify-between bg-[#6EAEE3] rounded-[24px] max-[620px]:flex-col max-[620px]:items-center">
             <div className="relative ps-[40px] pt-[60px] pb-[90px]">
               <div className=" flex items-center gap-[8px] mb-[20px]">
                 <img src={Zood} alt="" />
