@@ -53,10 +53,10 @@ const BasketCard = () => {
         <div className="">
           {productData.length > 0 ? (
             productData.map((data, index) => (
-              <div>
+              <div className="border-b-[1px] border-[#333333]  mb-[32px] pb-[10px]">
                 <div
                   key={index}
-                  className="flex w-[676px] max-[790px]:w-full min-h-[192px] gap-[32px] max-[500px]:gap-[10px] pb-[32px] border-b-[1px] border-[#333333] mb-[32px] last:mb-[0px] last:border-[0px]"
+                  className="flex w-[676px] max-[790px]:w-full min-h-[192px] gap-[32px] max-[500px]:gap-[10px]  last:mb-[0px] last:border-[0px]"
                 >
                   <img
                     className="rounded-[16px]"
@@ -96,7 +96,7 @@ const BasketCard = () => {
                       </p>
                     </div>
                     <div className="flex items-center justify-between max-[790px]:flex-col max-[790px]:items-start gap-[10px]">
-                      <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px]">
+                      <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px]  max-[470px]:hidden">
                         <div className="flex items-center gap-[10px]">
                           <p className="font-medium text-[14px] leading-[21px] text-white">
                             {data.action}
@@ -122,10 +122,22 @@ rounded-[6px] text-[#BFBFBF] w-[32px] h-[28px] bg-[#333333]"
                         >
                           +
                         </button>
+             
                       </div>
                     </div>
                   </div>
                 </div>
+                <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px] mt-[10px]">
+                      <div className="flex items-center gap-[10px]">
+                        <p className="font-medium text-[14px] leading-[21px] text-white">
+                          {data.action}
+                        </p>{" "}
+                        <div className="w-[4px] h-[4px] rounded-[50%] bg-[#0F0F0F]"></div>
+                        <p className="font-medium text-[14px] leading-[21px] text-white">
+                          {data.price * data.quantity} <span>uzs</span>
+                        </p>
+                      </div>
+                    </div>
               </div>
             ))
           ) : (
