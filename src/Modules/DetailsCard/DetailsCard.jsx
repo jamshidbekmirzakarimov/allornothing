@@ -13,7 +13,7 @@ import NewProduct from "../../assets/images/branjlet.png";
 import Product from "../../api/api";
 import Like from "../../assets/svg/like.svg";
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper/modules";
 import Card from "../../constants/Card/Card";
 import { useState } from "react";
 import SectionName from "../../constants/SectionName/SectionName";
@@ -22,6 +22,10 @@ import { FaHeart } from "react-icons/fa";
 
 const DetailsCard = () => {
   const { id } = useParams();
+  var scrollingContainer = document.documentElement || document.body;
+
+// Scroll to the top
+scrollingContainer.scrollTop = 0;
 
   // Find the product with matching id
   const product = Product.find((product) => String(product.id) === id);
@@ -91,8 +95,8 @@ const DetailsCard = () => {
               </div>
             </Link>
           </div>
-          <div className="flex gap-[84px]">
-            <div className="w-[600px] ">
+          <div className="flex max-[800px]:flex-col gap-[84px] max-[800px]:gap-[30px] w-full">
+            <div className="w-[600px] max-[800px]:w-full">
               <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -101,13 +105,13 @@ const DetailsCard = () => {
                   clickable: true,
                 }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper"
               >
                 {product.image.map((items) => (
                   <SwiperSlide>
-                    <div className="flex items-center justify-center w-[600px] h-[650px] bg-transparent">
-                      <div className="relative flex items-center justify-center bg-[#fff] w-[600px] h-[600px] rounded-[24px]">
+                    <div className="flex items-center justify-center w-full h-[650px] bg-transparent">
+                      <div className="relative flex items-center justify-center bg-[#fff] w-full max-[800px]:w-full h-[600px] rounded-[24px]">
                         <img width={480} height={480} src={items} alt="" />
 
                         <FaHeart
@@ -125,7 +129,7 @@ const DetailsCard = () => {
               </Swiper>
             </div>
 
-            <div className="text-white pt-[30px] w-full flex flex-col justify-between">
+            <div className="text-white pt-[30px] max-[800px]:p-0 w-full flex flex-col justify-between">
               <div>
                 <h3 className="text-[32px] leading-[38px] font-bold max-w-[300px] mb-[13px]">
                   {product.title}
@@ -146,7 +150,7 @@ const DetailsCard = () => {
                     <del>{product.delprice}</del> <span>uzs</span>
                   </p>
                 </div>
-                <div className="roboto flex items-center justify-between pb-[32px] mb-[32px] border-b-[1px] border-[#262626]">
+                <div className="roboto flex items-center justify-between pb-[32px] mb-[32px] border-b-[1px] border-[#262626] max-[550px]:flex-col max-[550px]:items-start max-[550px]:gap-[16px]">
                   <div>
                     <p className="text-[16px] font-medium leading-[19px] mb-[6px]">
                       Color:
@@ -182,13 +186,15 @@ const DetailsCard = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="flex items-center justify-between w-full">
-                  <button className="w-[49%] border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black ">
+                <div className="flex items-center justify-between w-full max-[800px]:mb-[40px] max-[550px]:flex-col max-[550px]:items-start max-[550px]:gap-[8px]">
+                  <button className="w-[49%] max-[550px]:w-full border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black ">
                     BUY NOW
                   </button>
                   <button
                     onClick={() => (cartCheck() ? removeTocart() : addTocart())}
-                    className={`w-[49%] border-[1px] border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black  ${cartCheck() ? "bg-[#F6CE3C] text-black" : ""} `}
+                    className={`w-[49%] border-[1px] max-[550px]:w-full  border-[#F6CE3C] text-[#f6ce3c] duration-300 font-semibold text-[16px] leading-[21px] uppercase pt-[19px] pb-[18px] rounded-[12px] hover:bg-[#F6CE3C] hover:text-black  ${
+                      cartCheck() ? "bg-[#F6CE3C] text-black" : ""
+                    } `}
                   >
                     add to cart
                   </button>

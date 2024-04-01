@@ -81,10 +81,12 @@ const Sale = () => {
               </Link>
             ))}
           </ul>
-          <ul className="flex w-full gap-x-[12px] gap-y-[48px] flex-wrap">
+          <ul className="flex w-full gap-y-[48px] justify-between max-[530px]:justify-center  flex-wrap">
             {currentProducts.map((product, index) => (
-              <Card
+              <Card 
+              className={"w-full"}
                 key={index}
+                id={product.id}
                 action={product.action}
                 image={product.image[0]}
                 title={product.title}
