@@ -53,10 +53,10 @@ const Card = ({ action, image, title, price, delprice, color, id, className }) =
 
   return (
     <>
-      <li className={`max-w-[315px] max-[680px]:max-w-[245px] min-h-[461px] max-[680px]:min-h-[361px] max-[530px]:max-w-[100%] ${className}`}>
-        <div className="w-full bg-white rounded-[12px] max-[680px]:h-[280px] flex items-center justify-center h-[380px] relative overflow-hidden">
+      <li className={`max-w-[315px] max-[680px]:max-w-[245px] max-[530px]:max-w-[100%] ${className}`}>
+        <div className="w-full bg-white rounded-[12px] max-[680px]:h-[280px] max-[450px]:h-[200px] flex items-center justify-center h-[380px] relative overflow-hidden">
           <div
-            className={`absolute top-0 left-0 py-[7px] px-[15px] text-white font-normal text-[12px] rounded-tl-[12px] rounded-br-[12px] bg-[${color}]`}
+            className={`absolute top-0 left-0 py-[7px] px-[15px] max-[450px]:px-[10px] max-[450px]:5px text-white font-normal text-[12px] rounded-tl-[12px] rounded-br-[12px] bg-[${color}]`}
           >
             {action}
           </div>

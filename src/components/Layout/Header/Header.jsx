@@ -355,7 +355,7 @@ const Header = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="h-[500px] overflow-auto px-[56px] max-[500px]:px-[10px]">
+                    <div className="h-[500px] overflow-x-auto px-[56px] max-[500px]:px-[10px]">
                       <BasketCard />
                     </div>
                   </div>

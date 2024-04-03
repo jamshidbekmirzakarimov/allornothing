@@ -68,15 +68,15 @@ const BasketCard = () => {
                   <div className="w-full flex justify-between flex-col">
                     <div className="flex items-start justify-between w-full">
                       <div>
-                        <h3 className="font-bold text-[20px] leading-[24px] text-[#F5F5F5] max-w-[224px] w-full mb-[12px]">
+                        <h3 className="font-bold text-[20px] leading-[24px] text-[#F5F5F5] max-w-[224px] w-full mb-[12px] max-[400px]:text-[18px]">
                           {data.title}
                         </h3>
-                        <div className="flex items-center gap-[16px]">
+                        <div className="flex items-center gap-[16px] max-[400px]:gap-[5px]">
                           <div className="flex items-center gap-[7px]">
                             <p className="roboto text-white font-medium max-[500px]:hidden">
                               Size:
                             </p>
-                            <button className="flex items-center justify-center roboto w-[32px] h-[32px] rounded-[8px] bg-[#333333] text-white">
+                            <button className="flex items-center justify-center text-[16px] max-[400px]:text-[14px] roboto w-[32px] h-[32px] max-[400px]:w-[25px] max-[400px]:h-[25px] rounded-[8px] bg-[#333333] text-white">
                               42
                             </button>
                           </div>
@@ -85,13 +85,13 @@ const BasketCard = () => {
                             <p className="roboto text-white font-medium max-[500px]:hidden">
                               Color:{" "}
                             </p>
-                            <div className="w-[32px] h-[32px] rounded-[50%] border-[1px] border-[#265AD9] p-[4px]">
+                            <div className="w-[32px] h-[32px] max-[400px]:w-[25px] max-[400px]:h-[25px] rounded-[50%] border-[1px] border-[#265AD9] p-[4px]">
                               <div className="w-full h-full rounded-[50%] bg-[#265AD9]"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <p className="roboto text-white font-medium text-[20px] rotate-90 mt-[15px] cursor-pointer">
+                      <p className="roboto text-white font-medium text-[20px] rotate-90 mt-[15px] max-[600px]:m-[0] cursor-pointer">
                         ...
                       </p>
                     </div>
@@ -107,7 +107,7 @@ const BasketCard = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-[12px]">
+                      <div className="flex items-center gap-[12px] max-[400px]:gap-[5px]">
                         <button
                           className="roboto text-[20px]```
 rounded-[6px] text-[#BFBFBF] w-[32px] h-[28px] bg-[#333333]"
@@ -117,27 +117,26 @@ rounded-[6px] text-[#BFBFBF] w-[32px] h-[28px] bg-[#333333]"
                         </button>
                         <p className="roboto text-white ">{data.quantity}</p>
                         <button
-                          className="roboto text-[20px] rounded-[6px] text-[#333333] w-[32px] h-[28px] bg-[#BFBFBF]"
+                          className="roboto w text-[20px] rounded-[6px] text-[#333333] w-[32px] h-[28px] bg-[#BFBFBF]"
                           onClick={() => handleIncrement(index)}
                         >
                           +
                         </button>
-             
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#FB1919] inline-block gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px] mt-[10px]">
-                      <div className="flex items-center gap-[10px]">
-                        <p className="font-medium text-[14px] leading-[21px] text-white">
-                          {data.action}
-                        </p>{" "}
-                        <div className="w-[4px] h-[4px] rounded-[50%] bg-[#0F0F0F]"></div>
-                        <p className="font-medium text-[14px] leading-[21px] text-white">
-                          {data.price * data.quantity} <span>uzs</span>
-                        </p>
-                      </div>
-                    </div>
+                <div className="bg-[#FB1919] inline-block hidden gap-[5px] py-[4px] px-[16px] rounded-[6px] max-[430px]:px-[5px] mt-[10px] max-[470px]:inline-block">
+                  <div className="flex items-center gap-[10px]">
+                    <p className="font-medium text-[14px] leading-[21px] text-white">
+                      {data.action}
+                    </p>{" "}
+                    <div className="w-[4px] h-[4px] rounded-[50%] bg-[#0F0F0F]"></div>
+                    <p className="font-medium text-[14px] leading-[21px] text-white">
+                      {data.price * data.quantity} <span>uzs</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             ))
           ) : (
