@@ -35,7 +35,7 @@ const Menu = ({ close }) => {
 
   return (
     <>
-      <section>
+      <section className="overflow-y-scroll">
         <details>
           <summary className="relative">
             <div className="flex items-center justify-between overflow-hidden">

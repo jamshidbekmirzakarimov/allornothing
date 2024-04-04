@@ -24,11 +24,10 @@ const LikeCard = () => {
 
   return (
     <section className="wrapper like-container">
-     <ul className="flex flex-wrap justify-between w-full gap-y-[30px]">
+     <ul className="grid grid-cols-4 gap-x-[10px] gap-y-[48px] max-[800px]:grid-cols-3 max-[500px]:grid-cols-2">
      {filterData().length > 0 ? (
         filterData().map((data, index) => (
           <Card
-          className={"w-full"}
             key={index}
             id={data.id}
             action={data.action}
