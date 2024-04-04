@@ -10,8 +10,8 @@ const AllProduct = () => {
   const addFunc = () => {
     setAdd(add + 4);
 
-    // Scroll to the end of the card list
-    cardListRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
+    // // Scroll to the end of the card list
+    // cardListRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
   return (
@@ -21,11 +21,10 @@ const AllProduct = () => {
           <SectionName>News product</SectionName>
           <ul
             ref={cardListRef}
-            className="grid grid-cols-4"
+            className="grid grid-cols-4grid grid-cols-4 gap-x-[10px] gap-y-[48px] max-[800px]:grid-cols-3 max-[500px]:grid-cols-2 "
           >
             {Product.slice(0, add).map((product, index) => (
               <Card
-              className={""}
                 key={index}
                 id={product.id} 
                 action={product.action}

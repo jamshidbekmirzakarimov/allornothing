@@ -68,7 +68,7 @@ const Card = ({ action, image, title, price, delprice, color, id, className }) =
             color={likeCheck() ? "red" : "#666666"}
           />
           <Link to={`/details/${id}`}>
-            <img width={200} height={200} src={image} alt="" />
+            <img src={image} alt="" />
           </Link>
         </div>
         <div className="mt-[12px]">

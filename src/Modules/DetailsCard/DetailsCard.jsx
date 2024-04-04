@@ -110,8 +110,8 @@ scrollingContainer.scrollTop = 0;
               >
                 {product.image.map((items) => (
                   <SwiperSlide>
-                    <div className="flex items-center justify-center w-full h-[650px] bg-transparent">
-                      <div className="relative flex items-center justify-center bg-[#fff] w-full max-[800px]:w-full h-[600px] rounded-[24px]">
+                    <div className="flex items-center justify-center w-full h-[650px] max-[800px]:h-[600px] bg-transparent max-[450px]:h-[500px] max-[]">
+                      <div className="relative flex items-center justify-center bg-[#fff] w-full max-[800px]:w-full h-[600px] max-[800px]:h-[550px] max-[450px]:h-[450px] rounded-[24px]">
                         <img width={480} height={480} src={items} alt="" />
 
                         <FaHeart

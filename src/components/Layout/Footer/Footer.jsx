@@ -9,14 +9,14 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="bg-[#262626] rounded-[20px]">
-            <div className="w-full min-h-[226px]   pt-[40px] ps-[40px] max-[400px]:ps-[20px]">
+            <div className="w-full min-h-[226px] pt-[40px] ps-[40px] max-[400px]:ps-[20px] max-[800px]:pe-[20px]">
               <h2 className="text-[#F1C05B] text-[12px] leading-[16px] mb-[31px]">
                 All or Nothing
               </h2>
 
-              <div className="flex items-center max-[780px]:flex-col max-[780px]:items-start">
-                <div className="flex items-center max-[780px]:mb-[20px]">
-                  <div className="flex flex-col gap-y-[16px] me-[80px] max-[800px]:me-[40px]">
+              <div className="flex items-center w-full max-[780px]:flex-col max-[780px]:items-start " >
+                <div className="flex items-center w-full max-[780px]:mb-[20px] max-[500px]:gap-[10px] ">
+                  <div className="flex flex-col gap-y-[16px] me-[80px] max-[800px]:me-[40px] max-[500px]:me-[0] ">
                     <a
                       className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap"
                       href="tel:+998998208008"
@@ -32,10 +32,10 @@ const Footer = () => {
                   </div>
 
                   <div className="flex flex-col gap-y-[16px] me-[80px] max-[460px]:me-[0]">
-                    <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap">
+                    <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap max-[360px]:whitespace-normal">
                       Biz haqimizda
                     </p>
-                    <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap">
+                    <p className="roboto font-normal text-[16px] leading-[18px] opacity-80 text-white whitespace-nowrap max-[360px]:whitespace-normal">
                       Ish vaqti 11:00 - 23:00
                     </p>
                   </div>
@@ -92,33 +92,35 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full h-[1px] bg-[#0F0F0F]"></div>
-            <div className="flex items-center justify-center">
-              <ul className="flex items-center gap-[14px] py-[20px]">
-                <li>
-                  <a
-                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
-                    href="https://www.instagram.com/all_or_nothing_shop"
-                  >
-                    <img src={Instagram} alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
-                    href="https://www.facebook.com/allornothinshop/"
-                  >
-                    <img src={Facebook} alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
-                    href="https://t.me/all_or_nothing_shop"
-                  >
-                    <img src={Telegram} alt="" />
-                  </a>
-                </li>
-              </ul>
+            <div className="hidden max-[800px]:block">
+              <div className="flex items-center justify-center">
+                <ul className="flex items-center gap-[14px] py-[20px]">
+                  <li>
+                    <a
+                      className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                      href="https://www.instagram.com/all_or_nothing_shop"
+                    >
+                      <img src={Instagram} alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                      href="https://www.facebook.com/allornothinshop/"
+                    >
+                      <img src={Facebook} alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="w-[44px] h-[44px] flex items-center justify-center rounded-[50%] bg-[#0D0D0D]"
+                      href="https://t.me/all_or_nothing_shop"
+                    >
+                      <img src={Telegram} alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="ps-[40px] pt-[16px] pb-[14px] flex items-center gap-[9px]">
