@@ -36,7 +36,6 @@ const LikeCard = () => {
             price={data.price}
             delprice={data.delprice}
             color={data.color}
-            
           />
         ))
       ) : (
