@@ -9,7 +9,7 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="bg-[#262626] rounded-[20px]">
-            <div className="w-full min-h-[226px] pt-[40px] ps-[40px] max-[400px]:ps-[20px] max-[800px]:pe-[20px]">
+            <div className="w-full min-h-[226px] pt-[40px] ps-[40px] pe-[40px] max-[400px]:ps-[20px] max-[800px]:pe-[20px]">
               <h2 className="text-[#F1C05B] text-[12px] leading-[16px] mb-[31px]">
                 All or Nothing
               </h2>
